@@ -11,10 +11,11 @@ import * as THREE from 'three';
 import { Bloom, ChromaticAberration, DepthOfField, EffectComposer } from '@react-three/postprocessing';
 import {BlendFunction} from "postprocessing"
 import { FloatingGrid } from './components/FloatingGrid';
+import Loader from './components/MeshTransitionMaterial/Loader';
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader/>}>
         <Leva />
         <Canvas shadows>
           <Stats />
