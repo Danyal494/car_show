@@ -39,7 +39,7 @@ const CarShow = () => {
     const { camera } = useThree();
   
     const endpoints = {
-      button1: [0, 3, 4],
+      button1: [-3, 1,-5],
       button2: [5, 5, 5],
       button3: [-5, 2, 8],
     }; // Define endpoints for each button

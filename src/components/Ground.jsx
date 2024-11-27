@@ -15,16 +15,16 @@ const Ground = () => {
         [normal, roughness].forEach((t) => {
             t.wrapS = RepeatWrapping;
             t.wrapT = RepeatWrapping;
-            t.repeat.set(1, 1);
+            t.repeat.set(20, 20);
         });
         normal.encoding = THREE.LinearEncoding;
     }, [normal, roughness]);
 
-    // useFrame((state, delta) => {
-    //     let t = -state.clock.getElapsedTime() * 0.02;
-    //     roughness.offset.set(0, t % 1);
-    //     normal.offset.set(0, t % 1);
-    //   });
+    useFrame((state, delta) => {
+        let t = -state.clock.getElapsedTime() * 0.02;
+        roughness.offset.set(0, t % 1);
+        normal.offset.set(0, t % 1);
+      });
     
     
 
