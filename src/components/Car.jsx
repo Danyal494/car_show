@@ -66,6 +66,7 @@ export function Car({transitionColor} ,props) {
               material={materials.Tail_light}
             />
           </group>
+       
           <group rotation={[0, 0, -Math.PI / 2]} scale={100}>
             <mesh
               castShadow
